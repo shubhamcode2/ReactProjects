@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  color: white;
+  perspective: 800px;
+}
+#cursor {
+  height: 20px;
+  width: 20px;
+  background-color: rgba(172, 255, 47, 0.952);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+}
+#cursor-blur {
+  height: 250px;
+  width: 250px;
+  background-color: rgba(186, 255, 47, 0.459);
+  border-radius: 50%;
+  filter: blur(40px);
+  position: fixed;
+  z-index: 9;
+}
+
+#nav {
+  height: 150px;
+  width: 100%;
+  position: fixed;
+  background-color: #22212B;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 100px;
+  z-index: 99;
+}
+#nav img {
+  height: 50px;
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: 1;
+}
+#main {
+  position: relative;
+  background-color: #979895;
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1;
+}
+#page1 h1 {
+  font-size: 120px;
+  font-weight: 900;
+  position: relative;
+}
+#page1 h1::before {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  color: black;
+  top: -6px;
+  left: -6px;
+  -webkit-text-stroke: 1px rgb(173, 255, 47);
+  z-index: 1;
+}
+#page1 h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#page1 p {
+  font-size: 15px;
+  font-weight: 500;
+  width: 40%;
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+}
+
+#scroller {
+  /* background-color: rgba(255, 0, 0, 0); */
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+  display: inline-block;
+  font-size: 90px;
+  font-weight: 800;
+  margin-right: 10px;
+  transition: all linear 0.5s;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(173, 255, 47);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#scroller h4:hover {
+  color: rgb(173, 255, 47);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#about-us {
+  height: 50vh;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0);
+  padding: 0 50px;
+  display: flex;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  justify-content: space-around;
+}
+#about-us img {
+  height: 180px;
+  border-radius: 20px;
+  width: 250px;
+  object-fit: cover;
+}
+#about-us-in {
+  text-align: center;
+  width: 50%;
+  row-gap: 10px;
+}
+#about-us-in h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+#about-us-in p {
+  font-size: 15px;
+  line-height: 22px;
+}
+#card-container {
+  background-color: rgba(255, 0, 0, 0);
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  justify-content: center;
+}
+.card {
+  height: 85%;
+  width: 20%;
+  border-radius: 20px;
+  /* color: blue; */
+  /* background-color: blue; */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.6s;
+  z-index: 10;
+}
+#card1 {
+  background-image: url(/assets/66c18efe4287b026747e7f6816a42376.jpg);
+}
+#card2 {
+  background-image: url(/assets/Golf-Ball-on-Tee2.jpg);
+}
+#card3 {
+  background-image: url(/assets/1000_F_143835726_TeL0OdJ62VT0hCexeSru8RjI3BIKLvjf.jpg);
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  opacity: 0;
+  padding-top: 130px;
+  transition: all ease 0.6s;
+  background-color: rgb(123, 255, 47);
+}
+.overlay h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: black;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.overlay p {
+  font-size: 18px;
+  color: black;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.card:hover {
+  transform: rotate3d(8, 2, 0, 25deg);
+}
+#greendiv {
+  background-color: rgb(70, 245, 31);
+  height: 30vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#greendiv h3 {
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  line-height: 40px;
+  font-weight: 600;
+  /* text-shadow: 1px 1px; */
+  text-align: center;
+  width: 80%;
+  align-items: center;
+  text-transform: uppercase;
+}
