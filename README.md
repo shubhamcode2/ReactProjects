@@ -1,23 +1,3 @@
-### **Beginner Projects (Build Core Concepts)**
-These projects help you solidify basic React concepts like components, props, state, and hooks:  
-1. **Personal Portfolio Website**  
-   - Features: About, Projects, Contact sections.
-   - Learnings: Component-based structure, props, and simple styling with CSS or Tailwind.
-
-2. **Todo App**  
-   - Features: Add, remove, mark as completed, filter tasks.
-   - Learnings: State management with hooks, conditional rendering.
-
-3. **Weather App**  
-   - Features: Fetch data from APIs (e.g., OpenWeather).
-   - Learnings: Fetch API/axios, handling side effects with `useEffect`.
-
-4. **Calculator**  
-   - Features: Basic arithmetic operations.
-   - Learnings: Event handling, state management.
-
----
-
 ### **Intermediate Projects (Learn Advanced Patterns)**  
 Take your skills up a notch by incorporating context, routing, and more advanced tools:  
 1. **Expense Tracker**  
