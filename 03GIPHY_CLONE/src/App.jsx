@@ -43,8 +43,8 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<AppLayout />}>
-        <Route path="" element={<Home />} />
+      <Route element={<AppLayout />}>
+        <Route path="/" element={<Home />} />
         <Route path="/:categories" element={<Categories />} />
         <Route path="/favorits" element={<Favories />} />
         <Route path="/:type/:slug" element={<SingleGif />} />
