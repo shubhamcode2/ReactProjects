@@ -12,12 +12,12 @@ function Home() {
       { limit: 20, type: filters, rating: "g" }
     );
     setGifs(data);
-    console.log(data);
+    // console.log(data);
 
   };
   useEffect(() => {
     fetchTrendingGifs();
-  }, [])
+  }, [filters])
 
   return (
     <div>
